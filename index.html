@@ -9,30 +9,42 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .blink {
+            animation: blinker 1.5s linear infinite;
+            color: red;
+            font-size: 1.5em;
+            /* Larger, responsive font size */
+            margin-bottom: 20px;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Pointless button</h1>
     <h3>warning: Pointless</h3> 
     <button id="button">Click Me!</button>
     <p>Based off of asdfmovie</p>
-    <marquee behavior="bounce" direction="right" scrollamount="30"> 
+    <marquee behavior="bounce" direction="right" scrollamount="20"> 
         <pre>
-            　　∧＿∧ 
+            　 ∧＿∧ 
             　(　･∀･) 
             　(　つ┳⊃ 
             ε (_)へ⌒ヽﾌ 
              (　　(　･ω･) 
              ◎―◎   ⊃  ⊃
-
         </pre>
 </marquee>
-<p>
-    <pre>
-            ╱|、
-      Hm?  (˚ˎ 。7  
-            |、˜〵          
-           じしˍ,)ノ
-    </pre>
-</p>
+<p class="blink">cat</p>
 </body>
 </html>
