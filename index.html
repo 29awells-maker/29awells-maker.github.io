@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" id="page">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pointless Website</title>
@@ -11,12 +10,13 @@
     <link rel="manifest" href="/site.webmanifest" />
     <style>
         body {
-            font-family: Arial, comic-sans;
+            font-family: 'Courier New', Courier, monospace;
             line-height: 1.5;
+            background-color: rgb(122, 122, 122);
         }
 
         .blink {
-            animation: blinker 2s linear infinite;
+            animation: blinker 5s linear infinite;
             color: rgb(0, 0, 0);
             font-size: 1.5em;
             margin-bottom: 20px;
@@ -27,14 +27,43 @@
                 opacity: 0;
             }
         }
+        #button {
+            background-color: red;
+            margin-left: 50%;
+            transform: scale(2);
+            border-radius: 50px;
+            
+        }
+        #page {
+            background-color: rgb(61, 61, 61);
+            color: rgb(255, 255, 255);
+        }
+        #warning {
+            margin-left: 47%;
+        }
+        #Cat {
+            color: black;
+            pointer-events: all;
+            
+        }
     </style>
+    <script>
+        document.getElementById("button")
+        switch(new KeyboardEvent("a")){
+            case true:
+                button.innerHTML("keep clicking")
+                break;
+            default:
+                
+        }
+    </script>
 </head>
 <body>
     <h1>Pointless button</h1>
-    <h3>warning: Pointless</h3> 
+    <h3 id="warning">warning: Pointless</h3> 
     <button id="button">Click Me!</button>
     <p>Based off of asdfmovie</p>
-    <marquee behavior="" direction="right" scrollamount="20"> 
+    <marquee behavior="" direction="right" scrollamount="50" id="Cat"> 
         <pre>
             　 ∧＿∧ 
             　(　･∀･) 
