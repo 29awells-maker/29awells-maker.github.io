@@ -36,14 +36,16 @@
             border-radius: 20px;
             border-style: ridge;
             border-color:gold;
+            padding-left: 20%;
+            padding-right: 20%;
         }
 
         #one {
             background-color: rgb(0, 195, 255);
             margin-top: 50px;
-            margin-left: 200px;
-            margin-right: 200px;
-            margin-bottom: 200px;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-bottom: 150px;
             border-style: ridge;
             border-width: 5px;
             border-radius: 25px;
@@ -60,3 +62,7 @@
             border-color: gold;
         }
         
+        footer{
+            padding-left: 47%;
+            margin-top: 400px;
+        }
