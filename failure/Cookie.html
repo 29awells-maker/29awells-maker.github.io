@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Clicker</title>
+    <style>
+      html {
+        justify-items: center;
+        background-size: cover;
+        background-image: url(data:image/jpeg;base64,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);
+      }
+      #cookie {
+        justify-self: center;
+      }
+      #cookie:active {
+        transform: scale(0.95);
+        transition-duration: 50ms;
+      }
+
+      #score {
+        background-color: cornflowerblue;
+        text-align: center;
+        justify-self: center;
+        padding: 12px 50px;
+        margin-left: 10px;
+        border-radius: 40px;
+      }
+
+      button {
+        margin-left: 60px;
+        padding: 12px 50px;
+        border-radius: 15px;
+        background-color: gold;
+      }
+
+      #content {
+        border-style: ridge;
+        padding: 20%;
+        background-image: linear-gradient(
+          to bottom,
+          rgb(255, 186, 57),
+          rgb(248, 112, 58)
+        );
+        border-color: darkgoldenrod;
+      }
+      .combo-text {
+        position: absolute;
+        font-size: 42px;
+        font-weight: bold;
+        color: yellow;
+        text-shadow: 3px 3px 6px black;
+        pointer-events: none;
+        animation: comboPop 1s ease-out forwards;
+      }
+
+      @keyframes comboPop {
+        0% {
+          opacity: 0;
+          transform: scale(0.5) translateY(0px);
+        }
+
+        20% {
+          opacity: 1;
+          transform: scale(1.3) translateY(-10px);
+        }
+
+        100% {
+          opacity: 0;
+          transform: scale(1) translateY(-100px);
+        }
+      }
+
+      .particle {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: explode 0.8s ease-out forwards;
+      }
+
+      @keyframes explode {
+        0% {
+          opacity: 1;
+          transform: translate(0px, 0px) scale(1);
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate(var(--x), var(--y)) scale(0);
+        }
+      }
+
+      .floating-text {
+        position: absolute;
+
+        font-size: 28px;
+        font-weight: bold;
+
+        pointer-events: none;
+
+        background: linear-gradient(
+          90deg,
+          red,
+          orange,
+          yellow,
+          lime,
+          cyan,
+          blue,
+          violet
+        );
+
+        background-size: 300% 300%;
+
+        background-clip: text;
+
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+
+        animation:
+          floatRandom 1s ease-out forwards,
+          rainbowMove 2s linear infinite;
+      }
+
+      @keyframes floatRandom {
+        0% {
+          opacity: 1;
+          transform: translate(0px, 0px) scale(1) rotate(0deg);
+        }
+
+        100% {
+          opacity: 0;
+
+          transform: translate(var(--randomX), var(--randomY)) scale(1.5)
+            rotate(var(--rotate));
+        }
+      }
+
+      @keyframes rainbowMove {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .shake {
+        animation: cookieShake 0.25s;
+      }
+
+      @keyframes cookieShake {
+        0% {
+          transform: translate(0px, 0px) rotate(0deg);
+        }
+        20% {
+          transform: translate(-6px, 2px) rotate(-3deg);
+        }
+        40% {
+          transform: translate(6px, -2px) rotate(3deg);
+        }
+        60% {
+          transform: translate(-4px, 1px) rotate(-2deg);
+        }
+        80% {
+          transform: translate(4px, -1px) rotate(2deg);
+        }
+        100% {
+          transform: translate(0px, 0px) rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <img
+        src="Cookie.png"
+        alt="Cookie"
+        width="400px"
+        id="cookie"
+        onclick="cookieClick(event)"
+      />
+      <div id="score">0</div>
+      <button id="autoButton" onclick="autoclickUpgrade()">
+        Auto Clicks (100 clicks)
+      </button>
+      <button id="multiButton" onclick="clickMultiUpgrade()">
+        Multi Clicks (100 clicks)
+      </button>
+    </div>
+  </body>
+  <script>
+    //config
+
+    //Autoclick
+    var autoclickamount = 0;
+    var autoclickCostPerLevel = 100;
+    var autoclickCost = 100;
+
+    // clickMulti
+    var clickMulti = 1;
+    var clickMultiCostPerLevel = 100;
+    var clickMultiCost = 100;
+
+    var score = 0;
+    var scoreBox = document.getElementById("score");
+    var autoButton = document.getElementById("autoButton");
+    var combo = 0;
+    var comboTimer;
+    var cookie = document.getElementById("cookie");
+
+    function autoclickUpgrade() {
+      if (score >= autoclickCost) {
+        score -= autoclickCost;
+        autoclickamount += 1;
+        scoreBox.innerHTML = score;
+        saveGame();
+        autoclickCost += autoclickCostPerLevel;
+        autoButton.innerHTML = "Auto Clicks (" + autoclickCost + " Clicks)";
+      }
+    }
+
+    function clickMultiUpgrade() {
+      if (score >= clickMultiCost) {
+        score -= clickMultiCost;
+        clickMulti += 1;
+        scoreBox.innerHTML = score;
+        saveGame();
+        clickMultiCost += clickMultiCostPerLevel;
+        multiButton.innerHTML = "Multi Clicks (" + clickMultiCost + " Clicks)";
+      }
+    }
+    function autoClick() {
+      score = score + 1 * autoclickamount;
+      scoreBox.innerHTML = score;
+      saveGame();
+    }
+    setInterval(autoClick, 250);
+
+    function cookieClick(event) {
+      score = score + 1 * clickMulti;
+      scoreBox.innerHTML = score;
+      saveGame();
+      // floating text
+      const text = document.createElement("div");
+      text.className = "floating-text";
+      text.innerHTML = "+" + clickMulti;
+
+      text.style.left = event.pageX + "px";
+      text.style.top = event.pageY + "px";
+
+      document.body.appendChild(text);
+
+      setTimeout(() => {
+        text.remove();
+      }, 1000);
+    }
+
+    function saveGame() {
+      var saveData = {
+        autoclickamount: autoclickamount,
+        autoclickCostPerLevel: autoclickCostPerLevel,
+        autoclickCost: autoclickCost,
+        clickMulti: clickMulti,
+        clickMultiCostPerLevel: clickMultiCostPerLevel,
+        clickMultiCost: clickMultiCost,
+        score: score,
+      };
+
+      var saveText = JSON.stringify(saveData);
+      console.log(saveText);
+      document.cookie = saveText;
+    }
+
+    function loadGame() {
+      var cookieText = document.cookie;
+      cookieText = JSON.parse(cookieText);
+
+      autoclickamount = cookieText.autoclickamount;
+      autoclickCostPerLevel = cookieText.autoclickCostPerLevel;
+      autoclickCost = cookieText.autoclickCost;
+      clickMulti = cookieText.clickMulti;
+      clickMultiCostPerLevel = cookieText.clickMultiCostPerLevel;
+      clickMultiCost = cookieText.clickMultiCost;
+      score = cookieText.score;
+    }
+
+    function cookieClick(event) {
+      score += 1 * clickMulti;
+      scoreBox.innerHTML = score;
+      cookie.classList.remove("shake");
+
+      /* restart animation */
+      void cookie.offsetWidth;
+
+      cookie.classList.add("shake");
+
+      saveGame();
+      createParticles(event.pageX, event.pageY);
+      // floating +score text
+      const text = document.createElement("div");
+      text.className = "floating-text";
+      text.innerHTML = "+" + clickMulti;
+
+      text.style.left = event.pageX + "px";
+      text.style.top = event.pageY + "px";
+      const randomX = (Math.random() - 0.5) * 120 + "px";
+      const randomY = -Math.random() * 120 - 40 + "px";
+      const randomRotate = (Math.random() - 0.5) * 40 + "deg";
+
+      text.style.setProperty("--randomX", randomX);
+      text.style.setProperty("--randomY", randomY);
+      text.style.setProperty("--rotate", randomRotate);
+
+      document.body.appendChild(text);
+
+      setTimeout(() => {
+        text.remove();
+      }, 1000);
+
+      // combo system
+      combo++;
+
+      clearTimeout(comboTimer);
+
+      comboTimer = setTimeout(() => {
+        combo = 0;
+      }, 1000);
+
+      // every 10 clicks show combo text
+      if (combo % 10 === 0) {
+        const comboText = document.createElement("div");
+
+        comboText.className = "combo-text";
+
+        const messages = [
+          "COMBO x" + combo,
+          "MEGA CLICK!",
+          "COOKIE FRENZY!",
+          "INSANE!",
+          "SUGAR RUSH!",
+        ];
+
+        comboText.innerHTML =
+          messages[Math.floor(Math.random() * messages.length)];
+
+        comboText.style.left = event.pageX - 50 + "px";
+        comboText.style.top = event.pageY - 50 + "px";
+
+        document.body.appendChild(comboText);
+
+        setTimeout(() => {
+          comboText.remove();
+        }, 1000);
+      }
+    }
+
+    function createParticles(x, y) {
+      for (let i = 0; i < 15; i++) {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+
+        // random colors
+        const colors = ["chocolate", "black"];
+
+        particle.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
+
+        particle.style.left = x + "px";
+        particle.style.top = y + "px";
+
+        // random explosion direction
+        const randomX = (Math.random() - 0.5) * 200 + "px";
+        const randomY = (Math.random() - 0.5) * 200 + "px";
+
+        particle.style.setProperty("--x", randomX);
+        particle.style.setProperty("--y", randomY);
+
+        document.body.appendChild(particle);
+
+        setTimeout(() => {
+          particle.remove();
+        }, 800);
+      }
+    }
+  </script>
+</html>

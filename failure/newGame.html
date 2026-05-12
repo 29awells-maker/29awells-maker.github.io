@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Game</title>
+    <style>
+      #startButton {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        background-color: gold;
+        border-radius: 15px;
+        border-color: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="startButton" onclick="moveButton()">Click here to start the game!</button>
+  </body>
+  <script>
+    function moveButton() {
+        var button = document.getElementById("startButton");
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        /*get rand pos in the width*/
+        width = Math.random() * width;
+        height = Math.random() * height;
+
+        button.style.left = width + "px"
+        button.style.top = height + "px"
+        button.innerText = "Click Me!"
+    }
+  </script>
+</html>

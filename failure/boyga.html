@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>Vault 81 Burgers</title>
+    <style>
+      body {
+        font-family: monospace;
+        font-size: larger;
+        background-color: rgb(43, 43, 43);
+        color: rgb(128, 255, 0);
+        align-items: center;
+      }
+      .item {
+        background-color: rgb(43, 43, 43);
+        padding: 20px;
+        margin: 5px;
+        border-radius: 10px;
+        color: rgb(128, 255, 0);
+        border: 3px solid rgb(128, 255, 0);
+        font-size: larger;
+        justify-content: space-evenly;
+      }
+
+      div{
+         background-color: rgb(43, 43, 43);
+        padding: 20px;
+        margin: 5px;
+        border-radius: 10px;
+        color: rgb(128, 255, 0);
+        border: 3px solid rgb(128, 255, 0);
+        font-size: larger;
+        justify-content: space-evenly;
+      }
+
+      #app {
+        width: 600px;
+        align-self: center;
+        justify-self: center;
+      }
+      #menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+      }
+
+      .order {
+        margin-top: 30px;
+      }
+
+      .slot {
+        border: 3px solid rgb(128, 255, 0);
+        border-radius: 10px;
+        padding: 20px;
+        font-size: larger;
+      }
+
+      .selected {
+        font-family: monospace;
+        background-color: rgb(128, 255, 0);
+        color: rgb(43, 43, 43);
+        font-size: larger;
+        list-style: square;
+      }
+
+      button {
+      background-color: rgb(43, 43, 43);
+      color: rgb(128, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="menu">
+        <div class="item" onclick="toggleSelect(this)">Bun</div>
+        <div class="item" onclick="toggleSelect(this)">Patty</div>
+        <div class="item" onclick="toggleSelect(this)">Cheese</div>
+        <div class="item" onclick="toggleSelect(this)">Lettuce</div>
+        <div class="item" onclick="toggleSelect(this)">Chicken</div>
+        <div class="item" onclick="toggleSelect(this)">Pinapple</div>
+        <div class="item" onclick="toggleSelect(this)">Pickles</div>
+        <div class="item" onclick="toggleSelect(this)">Onions</div>
+        <div class="item" onclick="toggleSelect(this)">Pepper</div>
+        <div class="item" onclick="toggleSelect(this)">tomato</div>
+        <div class="item" onclick="toggleSelect(this)">Bacon</div>
+        <div class="item" onclick="toggleSelect(this)">ketchup</div>
+        <div class="item" onclick="toggleSelect(this)">mayo</div>
+        <div class="item" onclick="toggleSelect(this)">jockey</div>
+      </div>
+
+      <div id="order">
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function toggleSelect(element) {
+      element.classList.toggle("selected");
+    }
+
+    function addToCart() {
+      var cart = document.getElementById("order");
+      var selectedItems = document.getElementsByClassName("selected");
+
+      var burger = document.createElement('div');
+
+      for (const item of selectedItems) {
+          burger.innerHTML += item.textContent + " ";
+      }
+
+      cart.appendChild(burger);
+    }
+  </script>
+</html>
