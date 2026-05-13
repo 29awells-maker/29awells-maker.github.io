@@ -1,0 +1,48 @@
+nav{
+    background-color: #0080ff;
+    color: #DDDDDD;
+    width: 600px;
+    padding: 20px;
+    border-radius: 100px;
+}
+h1{
+    background-color: #0080ff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 115px;
+    color: #DDDDDD;
+
+}
+html{
+    background-color: #0D1321;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    text-align: center;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    background-color: #AC7B7D;
+    padding: 5px;
+
+}
+
+li{
+    margin-bottom: 20px;
+}
+
+.pixelify-sans-coolclass {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.bowlby-one-regular {
+  font-family: "Bowlby One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
