@@ -1,12 +1,11 @@
 nav{
     background-color: #0080ff;
     color: #DDDDDD;
-    width: 600px;
     padding: 20px;
     border-radius: 100px;
 }
 h1{
-    background-color: #0080ff;
+    background-color: #470097;
     text-align: center;
     padding: 20px;
     border-radius: 115px;
@@ -24,9 +23,11 @@ html{
     background-size: cover;
 }
 
-a{
-    background-color: #AC7B7D;
+.link{
+    background-color: #e100ff;
     padding: 5px;
+    color: #ffffff;
+    border-radius: 15px;
 
 }
 
@@ -45,4 +46,33 @@ li{
   font-family: "Bowlby One", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.one{
+    background-color: #7700ff;
+    color: #DDDDDD;
+    margin-bottom: 50px;
+    border-radius: 45px;
+}
+
+.two{
+    background-color: #7700ff;
+    color: #DDDDDD;
+    margin-bottom: 200px;
+    border-radius: 45px;
+}
+
+a{
+    color: #DDDDDD;
+}
+
+a:hover{
+    background-color: #ff00b3;
+}
+
+.half{
+    background-color: #0080ff;
+    padding: 55px;
+    margin: 30px;
+    border-radius: 30px;
 }
